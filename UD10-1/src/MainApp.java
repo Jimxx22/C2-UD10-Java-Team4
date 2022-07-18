@@ -9,12 +9,16 @@ public class MainApp {
 		
 	}
 	
+	//Bloque principal del progama
 	public static void startApp () {
+		//Declaraciones de variables
 		Scanner sc = new Scanner (System.in);
 		Numero num = new Numero();
 		int num1, resultado = 0;
 		
+		//Try catch para encontrar errores de formato de entrada
 		try {
+			//Bucle principal de buscar el numero
 			while (resultado != -1) {
 				num1 = recogerNumero(sc);
 				resultado = num.masMenos(num1);
@@ -33,6 +37,7 @@ public class MainApp {
 		
 	}
 	
+	//Recoger entrada de numero por teclado
 	public static int recogerNumero (Scanner sc) throws  InputMismatchException {
 		System.out.println("Introduce un numero");
 		int num = sc.nextInt();
