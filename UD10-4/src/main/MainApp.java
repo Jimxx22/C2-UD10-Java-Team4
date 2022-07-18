@@ -54,11 +54,13 @@ public class MainApp {
 			calculadora.division();
 			break;
 		case "8":
+			//Seguir el bucle principal
 			return false;
 		default:
 			throw new ExceptionCustom(200);
 		}
 		
+		//Salir del bucle principal
 		return true;
 		
 	}
