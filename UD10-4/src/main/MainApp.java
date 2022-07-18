@@ -10,6 +10,7 @@ public class MainApp {
 	static Calculadora calculadora;
 	static Scanner sc;
 
+	// Método main
 	public static void main(String[] args) {
 		
 		sc = new Scanner(System.in);
@@ -26,6 +27,7 @@ public class MainApp {
 		
 	}
 	
+	// Método para el switch del menú
 	private static boolean seleccionarOpcion() throws ExceptionCustom {
 		String opcion;
 		opcion = sc.next();
@@ -67,6 +69,7 @@ public class MainApp {
 		
 	}
 	
+	// Método para mostrar el menu
 	private static void mostrarMenu() {
 		System.out.println("╔══════════════════════════╗");
 		System.out.println("║  Calculadora arítmetica  ║");
