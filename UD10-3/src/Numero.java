@@ -13,8 +13,16 @@ public class Numero {
 		return numero;
 	}
 	
-	// Método para comparar el número entrado para el usuario y el generado aleatoriamente
+	// Método para comparar el número entrado es par o impar
 	public int parImpar() {
 		return numero%2;
 	}
+
+	// Método toString
+	@Override
+	public String toString() {
+		return "El numero aleatorio generado es: "+ numero;
+	}
+	
+	
 }
