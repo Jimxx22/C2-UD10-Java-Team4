@@ -3,6 +3,7 @@ package main;
 import java.util.Scanner;
 
 import clases.Calculadora;
+import exceptions.ExceptionCustom;
 
 public class MainApp {
 	
@@ -14,41 +15,56 @@ public class MainApp {
 		sc = new Scanner(System.in);
 		calculadora = new Calculadora();
 		
+		try {
+			mostrarMenu();
+			while(seleccionarOpcion()) {
+				mostrarMenu();
+			}
+		} catch (ExceptionCustom e) {
+			System.out.println("Error: "+e);
+		}
+		
+		
 	}
 	
-	private static void seleccionarOpcion() {
+	private static boolean seleccionarOpcion() throws ExceptionCustom {
 		String opcion;
 		opcion = sc.next();
 		
 		switch (opcion) {
 		case "1":
-			sumar();
+			calculadora.suma();
 			break;
 		case "2":
-			restar();
+			calculadora.resta();
 			break;
 		case "3":
-			multiplicar();
+			calculadora.multiplicacion();
 			break;
 		case "4":
-			
+			calculadora.potencia();
 			break;
 		case "5":
-			
+			calculadora.raiz2();
 			break;
 		case "6":
-			
+			calculadora.raiz3();
 			break;
 		case "7":
-			
+			calculadora.division();
 			break;
 		case "8":
-			
-			break;
+			//Salir del bucle principal
+			System.out.println("╔══════════════════════════╗");
+			System.out.println("║    Final del programa    ║");
+			System.out.println("╚══════════════════════════╝");
+			return false;
 		default:
-			
-			break;
+			throw new ExceptionCustom(200);
 		}
+		
+		//seguir el bucle principal
+		return true;
 		
 	}
 	
@@ -67,40 +83,7 @@ public class MainApp {
 		System.out.println("║    8. Salir del programa ║");
 		System.out.println("║                          ║");
 		System.out.println("╚══════════════════════════╝");
-		System.out.print("Por favor introduce la seleccion [1-8]:");
-	}
-	
-	private static void sumar() {
-		double num1, num2, res;
-		System.out.println("Suma");
-		System.out.println("Introduce el primer numero: ");
-		num1 = sc.nextDouble();
-		System.out.println("Introduce el segundo numero: ");
-		num2 = sc.nextDouble();
-		res = calculadora.suma(num1, num2);
-		System.out.println("El resultado es: "+res);
-	}
-	
-	private static void restar() {
-		double num1, num2, res;
-		System.out.println("Resta");
-		System.out.println("Introduce el primer numero: ");
-		num1 = sc.nextDouble();
-		System.out.println("Introduce el segundo numero: ");
-		num2 = sc.nextDouble();
-		res = calculadora.resta(num1, num2);
-		System.out.println("El resultado es: "+res);
-	}
-	
-	private static void multiplicar() {
-		double num1, num2, res;
-		System.out.println("Multiplicación");
-		System.out.println("Introduce el primer numero: ");
-		num1 = sc.nextDouble();
-		System.out.println("Introduce el segundo numero: ");
-		num2 = sc.nextDouble();
-		res = calculadora.multiplicacion(num1, num2);
-		System.out.println("El resultado es: "+res);
+		System.out.print("Por favor introduce la selección [1-8]:");
 	}
 
 }
