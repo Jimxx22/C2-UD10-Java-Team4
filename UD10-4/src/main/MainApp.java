@@ -57,7 +57,6 @@ public class MainApp {
 			return false;
 		default:
 			throw new ExceptionCustom(200);
-			break;
 		}
 		
 		return true;
