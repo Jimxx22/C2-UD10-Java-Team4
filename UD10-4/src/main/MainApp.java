@@ -71,13 +71,14 @@ public class MainApp {
 	}
 	
 	private static void sumar() {
-		int num1, num2, res;
+		double num1, num2, res;
 		System.out.println("Suma");
 		System.out.println("Introduce el primer numero: ");
-		num1 = sc.nextInt();
+		num1 = sc.nextDouble();
 		System.out.println("Introduce el segundo numero: ");
-		num2 = sc.nextInt();
+		num2 = sc.nextDouble();
 		res = calculadora.suma(num1, num2);
+		System.out.println("El resultado es: "+res);
 	}
 
 }
