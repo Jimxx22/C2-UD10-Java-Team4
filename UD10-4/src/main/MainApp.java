@@ -21,9 +21,8 @@ public class MainApp {
 				mostrarMenu();
 			}
 		} catch (ExceptionCustom e) {
-			System.out.println("Error: "+e);
+			System.out.println("Error ExceptionCustom: "+e);
 		}
-		
 		
 	}
 	
