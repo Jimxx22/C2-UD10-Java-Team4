@@ -20,7 +20,7 @@ public class Password {
 		return longitud;
 	}
 	
-	private boolean esFuerte() {
+	public boolean esFuerte() {
 		int numMayu = 0, numMinu = 0, numNum = 0;
 		char caracter;
 		
