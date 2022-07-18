@@ -3,9 +3,9 @@ public class ExcepcionCustom extends Exception {
 	
 	private String mensaje;
 
-	public ExcepcionCustom(String mensaje) {
+	public ExcepcionCustom() {
 		super();
-		this.mensaje = mensaje;
+		this.mensaje = "Esto es un Objeto Exception";
 	}
 	
 	@Override
