@@ -4,6 +4,7 @@ public class ExceptionCustom extends Exception {
 	
 	private int codigoError;
 	
+	//Constructor recibiendo un codigo de error
 	public ExceptionCustom(int codigo) {
 		super();
 		this.codigoError = codigo;
