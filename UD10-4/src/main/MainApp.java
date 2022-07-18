@@ -6,7 +6,7 @@ import clases.Calculadora;
 
 public class MainApp {
 	
-	Calculadora calculadora;
+	static Calculadora calculadora;
 	static Scanner sc;
 
 	public static void main(String[] args) {
