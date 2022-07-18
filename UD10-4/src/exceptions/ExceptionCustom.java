@@ -2,18 +2,18 @@ package exceptions;
 
 public class ExceptionCustom extends Exception {
 	
-	private int num;
+	private int codigoError;
 	
-	public ExceptionCustom(int num) {
+	public ExceptionCustom(int codigo) {
 		super();
-		this.num = num;
+		this.codigoError = codigo;
 	}
 
-	//Devuelve el mensaje de error si el numero es negativo;
+	//Devuelve el mensaje de error dependiendo el codigo de error;
 	@Override
 	public String getMessage() {
 		String mensaje = "";
-		switch (num) {
+		switch (codigoError) {
 		case 111:
 			mensaje = "El numero es negativo";
 			break;
