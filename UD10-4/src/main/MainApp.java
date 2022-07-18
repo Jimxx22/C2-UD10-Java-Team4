@@ -6,42 +6,46 @@ import clases.Calculadora;
 
 public class MainApp {
 	
-	Calculadora calculadora;
+	static Calculadora calculadora;
 	static Scanner sc;
 
 	public static void main(String[] args) {
 		
-		char opcion = ' ';
 		sc = new Scanner(System.in);
+		calculadora = new Calculadora();
 		
 	}
 	
 	private static void seleccionarOpcion() {
-		char opcion = ' ';
+		String opcion;
+		opcion = sc.next();
 		
 		switch (opcion) {
-		case '1':
-			calculadora.suma();
+		case "1":
+			sumar();
 			break;
-		case '2':
-			calculadora.suma();
+		case "2":
+			restar();
 			break;
-		case '3':
+		case "3":
+			multiplicar();
+			break;
+		case "4":
 			
 			break;
-		case '4':
+		case "5":
 			
 			break;
-		case '5':
+		case "6":
 			
 			break;
-		case '6':
+		case "7":
 			
 			break;
-		case '7':
+		case "8":
 			
 			break;
-		case '8':
+		defualt:
 			
 			break;
 		}
@@ -64,6 +68,16 @@ public class MainApp {
 		System.out.println("║                          ║");
 		System.out.println("╚══════════════════════════╝");
 		System.out.print("Por favor introduce la seleccion [1-8]:");
+	}
+	
+	private static void sumar() {
+		int num1, num2, res;
+		System.out.println("Suma");
+		System.out.println("Introduce el primer numero: ");
+		num1 = sc.nextInt();
+		System.out.println("Introduce el segundo numero: ");
+		num2 = sc.nextInt();
+		res = calculadora.suma(num1, num2);
 	}
 
 }
