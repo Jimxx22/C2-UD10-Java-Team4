@@ -11,37 +11,41 @@ public class MainApp {
 
 	public static void main(String[] args) {
 		
-		char opcion = ' ';
 		sc = new Scanner(System.in);
+		calculadora = new Calculadora();
 		
 	}
 	
 	private static void seleccionarOpcion() {
-		char opcion = ' ';
+		String opcion;
+		opcion = sc.next();
 		
 		switch (opcion) {
-		case '1':
-			calculadora.suma();
+		case "1":
+			sumar();
 			break;
-		case '2':
-			calculadora.suma();
+		case "2":
+			restar();
 			break;
-		case '3':
+		case "3":
+			multiplicar();
+			break;
+		case "4":
 			
 			break;
-		case '4':
+		case "5":
 			
 			break;
-		case '5':
+		case "6":
 			
 			break;
-		case '6':
+		case "7":
 			
 			break;
-		case '7':
+		case "8":
 			
 			break;
-		case '8':
+		defualt:
 			
 			break;
 		}
@@ -64,6 +68,39 @@ public class MainApp {
 		System.out.println("║                          ║");
 		System.out.println("╚══════════════════════════╝");
 		System.out.print("Por favor introduce la seleccion [1-8]:");
+	}
+	
+	private static void sumar() {
+		double num1, num2, res;
+		System.out.println("Suma");
+		System.out.println("Introduce el primer numero: ");
+		num1 = sc.nextDouble();
+		System.out.println("Introduce el segundo numero: ");
+		num2 = sc.nextDouble();
+		res = calculadora.suma(num1, num2);
+		System.out.println("El resultado es: "+res);
+	}
+	
+	private static void restar() {
+		double num1, num2, res;
+		System.out.println("Resta");
+		System.out.println("Introduce el primer numero: ");
+		num1 = sc.nextDouble();
+		System.out.println("Introduce el segundo numero: ");
+		num2 = sc.nextDouble();
+		res = calculadora.resta(num1, num2);
+		System.out.println("El resultado es: "+res);
+	}
+	
+	private static void multiplicar() {
+		double num1, num2, res;
+		System.out.println("Multiplicación");
+		System.out.println("Introduce el primer numero: ");
+		num1 = sc.nextDouble();
+		System.out.println("Introduce el segundo numero: ");
+		num2 = sc.nextDouble();
+		res = calculadora.multiplicacion(num1, num2);
+		System.out.println("El resultado es: "+res);
 	}
 
 }
