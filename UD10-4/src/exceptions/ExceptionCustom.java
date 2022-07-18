@@ -13,8 +13,15 @@ public class ExceptionCustom extends Exception {
 	@Override
 	public String getMessage() {
 		String mensaje = "";
-		if (num < 0) {
+		switch (num) {
+		case 111:
 			mensaje = "El numero es negativo";
+			break;
+		case 200:
+			mensaje = "Entrada no reconocida";
+			break;
+		default:
+			break;
 		}
 		return mensaje;
 		

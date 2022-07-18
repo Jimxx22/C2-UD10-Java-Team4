@@ -45,7 +45,7 @@ public class MainApp {
 		case "8":
 			
 			break;
-		defualt:
+		default:
 			
 			break;
 		}
