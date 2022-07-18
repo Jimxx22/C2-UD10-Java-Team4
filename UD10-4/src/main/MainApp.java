@@ -80,5 +80,27 @@ public class MainApp {
 		res = calculadora.suma(num1, num2);
 		System.out.println("El resultado es: "+res);
 	}
+	
+	private static void restar() {
+		double num1, num2, res;
+		System.out.println("Resta");
+		System.out.println("Introduce el primer numero: ");
+		num1 = sc.nextDouble();
+		System.out.println("Introduce el segundo numero: ");
+		num2 = sc.nextDouble();
+		res = calculadora.resta(num1, num2);
+		System.out.println("El resultado es: "+res);
+	}
+	
+	private static void multiplicar() {
+		double num1, num2, res;
+		System.out.println("Multiplicación");
+		System.out.println("Introduce el primer numero: ");
+		num1 = sc.nextDouble();
+		System.out.println("Introduce el segundo numero: ");
+		num2 = sc.nextDouble();
+		res = calculadora.multiplicacion(num1, num2);
+		System.out.println("El resultado es: "+res);
+	}
 
 }
