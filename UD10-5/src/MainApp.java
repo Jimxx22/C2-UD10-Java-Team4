@@ -21,6 +21,7 @@ public class MainApp {
 			lArray=Integer.parseInt(sc.nextLine());
 			
 			passwords = new Password[lArray];
+			fuerte = new Boolean[lArray];
 			
 			System.out.print("Indica la longitud de las contrasenas: ");
 			lPass=Integer.parseInt(sc.nextLine());
