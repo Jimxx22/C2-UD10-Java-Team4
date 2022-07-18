@@ -7,7 +7,7 @@ public class MainApp {
 	static Scanner sc=new Scanner(System.in);
 	
 	public static void main(String[] args) {
-		
+		//Iniciamos la generar passwords
 		generarPassword();
 
 	}
@@ -16,14 +16,16 @@ public class MainApp {
 		
 		int lArray, lPass;
 		try {
+			//Indicamos el numero de passwords que queremos crear y su longitud
 			System.out.print("Indica cuantas contrasenas quieres generar: ");
 			lArray=Integer.parseInt(sc.nextLine());
 			
 			passwords = new Password[lArray];
 			
-			System.out.print("Indica la longitud de las contrasenas; ");
+			System.out.print("Indica la longitud de las contrasenas: ");
 			lPass=Integer.parseInt(sc.nextLine());
 			
+			//Rellenamos los arrays con las contraseñas y los booleanos
 			for (int i = 0; i < passwords.length; i++) {
 				passwords[i]=new Password(lPass);
 				fuerte[i]=passwords[i].esFuerte();
