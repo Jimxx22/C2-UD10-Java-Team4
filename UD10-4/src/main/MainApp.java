@@ -54,13 +54,16 @@ public class MainApp {
 			calculadora.division();
 			break;
 		case "8":
-			//Seguir el bucle principal
+			//Salir del bucle principal
+			System.out.println("╔══════════════════════════╗");
+			System.out.println("║    Final del programa    ║");
+			System.out.println("╚══════════════════════════╝");
 			return false;
 		default:
 			throw new ExceptionCustom(200);
 		}
 		
-		//Salir del bucle principal
+		//seguir el bucle principal
 		return true;
 		
 	}
