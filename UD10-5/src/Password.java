@@ -22,7 +22,6 @@ public class Password {
 	
 	private boolean esFuerte() {
 		int numMayu = 0, numMinu = 0, numNum = 0;
-		int longitud = 0;
 		char caracter;
 		
 		for(int i = 0; i < longitud; i++) {
