@@ -11,7 +11,7 @@ public class Calculadora {
 	public Calculadora() {}
 	
 	// Métodos para calcular la suma, resta, multiplicación, división, potencia, raíz cuadrada y cúbica
-	public void suma() {
+	public void suma() throws InputMismatchException{
 		try {
 			double n1, n2, res;
 			System.out.println("Suma");
@@ -28,7 +28,7 @@ public class Calculadora {
 		}
 	}
 	
-	public void resta() {
+	public void resta() throws InputMismatchException{
 		try {
 			double n1, n2, res;
 			System.out.println("Resta");
@@ -45,7 +45,7 @@ public class Calculadora {
 		}	
 	}
 	
-	public void multiplicacion() {
+	public void multiplicacion() throws InputMismatchException{
 		try {
 			double n1, n2, res;
 			System.out.println("Multiplicación");
@@ -62,7 +62,7 @@ public class Calculadora {
 		}	
 	}
 	
-	public void division() {
+	public void division() throws InputMismatchException, ArithmeticException{
 		try {
 			double n1, n2, res;
 			System.out.println("División");
@@ -81,7 +81,7 @@ public class Calculadora {
 		}	
 	}
 	
-	public void potencia() {
+	public void potencia() throws InputMismatchException{
 		try {
 			double n1, n2, res;
 			System.out.println("Potencia");
@@ -98,7 +98,7 @@ public class Calculadora {
 		}	
 	}
 	
-	public void raiz2() {
+	public void raiz2() throws InputMismatchException, ExceptionCustom{
 		try {
 			double n1, res;
 			System.out.println("Raíz cuadrada");
@@ -120,7 +120,7 @@ public class Calculadora {
 		}
 	}
 	
-	public void raiz3() {
+	public void raiz3() throws InputMismatchException, ExceptionCustom{
 		try {
 			double n1, res;
 			System.out.println("Raíz cúbica");
